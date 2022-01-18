@@ -2,7 +2,7 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-const baseIpfsPath = "ipfs://QmWkfRwR6TK8STyAe66iA7vCZhZrcd28uJdHJ9VEw7keig/";
+const baseIpfsPath = "ipfs://QmU9weLhTPpDeenZccrnU1rWSxH5NcUb7cuyR8LdWcKwoe/";
 const maxSupply = 13;
 const maxAllowed = 3;
 

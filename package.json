@@ -11,7 +11,9 @@
   "scripts": {
     "deploy": "hardhat deploy",
     "test": "hardhat test",
-    "compile": "hardhat compile"
+    "compile": "hardhat compile",
+    "accounts": "npx hardhat accounts",
+    "balances": "npx hardhat balances"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.2"

@@ -1,15 +1,4 @@
-# Basic Sample Hardhat Project
+# PetFi
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+## Deployed Contracts
+Crowdsale Fuji Testnet Address: `0x7F49FcC903301A76F37e53399B005E7226d9d5A1`
