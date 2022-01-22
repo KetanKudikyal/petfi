@@ -505,3 +505,7 @@
   --clr-primary-800: rgb(var(--tw-clr-primary-800)); /* #1e293b */
   --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #0f172a */
 }
+
+.theme-color {
+  --primary-background-color: #020204;
+}

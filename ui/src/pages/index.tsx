@@ -1,12 +1,8 @@
 import * as React from 'react';
 
-import Layout from '@/components/layout/Layout';
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
-import Seo from '@/components/Seo';
 import Header from '@/components/layout/Header';
+import Layout from '@/components/layout/Layout';
+import Seo from '@/components/Seo';
 
 export default function HomePage() {
   return (
@@ -14,7 +10,7 @@ export default function HomePage() {
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
       <main>
-        <section className='bg-white'>
+        <section>
           <Header />
           <div className='flex flex-col items-center justify-center layout min-h-screen text-center'>
             <h1>Next.js + Tailwind CSS + TypeScript Starter</h1>
