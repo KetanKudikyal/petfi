@@ -33,7 +33,7 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
               <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
-                <div className='flex flex-shrink-0 items-center'>
+                <div className='cursor-pointer flex flex-shrink-0 items-center'>
                   <div className='flex flex-row items-center'>
                     <div>
                       <img
@@ -64,7 +64,7 @@ export default function Example() {
                         className={classNames(
                           item.current
                             ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                            : 'text-gray-300  hover:text-pink',
                           'font-medium px-3 py-2 rounded-md text-sm'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -80,10 +80,10 @@ export default function Example() {
                   href='#_'
                   className='font-medium font-medium group inline-block px-5 py-2.5 relative rounded text-white'
                 >
-                  <span className='absolute bg-gradient-to-br blur-sm filter from-purple-600 h-full left-0 opacity-50 rounded to-blue-500 top-0 w-full'></span>
-                  <span className='absolute bg-gradient-to-br filter from-purple-600 group-active:opacity-0 h-full inset-0 ml-0.5 mt-0.5 opacity-50 rounded to-blue-500 w-full'></span>
-                  <span className='absolute bg-gradient-to-br duration-200 ease-out filter from-purple-600 group-active:opacity-0 h-full inset-0 rounded shadow-xl to-blue-500 transition-all w-full group-hover:blur-sm'></span>
-                  <span className='absolute bg-gradient-to-br duration-200 ease-out from-blue-500 h-full inset-0 rounded to-purple-600 transition w-full'></span>
+                  <span className='absolute bg-gradient-to-br blur-sm filter from-[#EF1186] h-full left-0 opacity-50 rounded to-blue-500 top-0 w-full'></span>
+                  <span className='absolute bg-gradient-to-br filter from-[#EF1186] group-active:opacity-0 h-full inset-0 ml-0.5 mt-0.5 opacity-50 rounded to-[#F712A3] w-full'></span>
+                  <span className='absolute bg-gradient-to-br duration-200 ease-out filter from-[#EF1186] group-active:opacity-0 h-full inset-0 rounded shadow-xl to-[#F712A3] transition-all w-full group-hover:blur-sm'></span>
+                  <span className='absolute bg-gradient-to-br duration-200 ease-out from-[#F712A3] h-full inset-0 rounded to-[#EF1186] transition w-full'></span>
                   <span className='relative'>Connect wallet</span>
                 </a>
                 {/* Profile dropdown */}

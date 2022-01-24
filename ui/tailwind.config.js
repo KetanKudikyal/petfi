@@ -33,6 +33,7 @@ module.exports = {
           900: withOpacity('--tw-clr-primary-900'),
         },
         dark: '#020204',
+        pink: '#EF1186',
       },
       keyframes: {
         flicker: {
