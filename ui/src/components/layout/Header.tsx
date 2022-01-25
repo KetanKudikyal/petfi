@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
@@ -19,25 +20,25 @@ export default function Example() {
     <Disclosure as='nav' className='bg-dark'>
       {({ open }) => (
         <>
-          <div className='max-w-7xl mx-auto px-2 py-2 sm:px-6 lg:px-8'>
-            <div className='flex h-16 items-center justify-between relative'>
-              <div className='absolute flex inset-y-0 items-center left-0 sm:hidden'>
+          <div className='px-2 py-2 mx-auto max-w-7xl sm:px-6 lg:px-8'>
+            <div className='flex relative justify-between items-center h-16'>
+              <div className='flex absolute inset-y-0 left-0 items-center sm:hidden'>
                 {/* Mobile menu button*/}
-                <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+                <Disclosure.Button className='inline-flex justify-center items-center p-2 text-gray-400 rounded-md hover:text-white hover:bg-gray-700 focus:ring-2 focus:ring-inset focus:ring-white focus:outline-none'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
-                    <XIcon className='block h-6 w-6' aria-hidden='true' />
+                    <XIcon className='block w-6 h-6' aria-hidden='true' />
                   ) : (
-                    <MenuIcon className='block h-6 w-6' aria-hidden='true' />
+                    <MenuIcon className='block w-6 h-6' aria-hidden='true' />
                   )}
                 </Disclosure.Button>
               </div>
-              <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
-                <div className='cursor-pointer flex flex-shrink-0 items-center'>
+              <div className='flex flex-1 justify-center items-center sm:justify-start sm:items-stretch'>
+                <div className='flex flex-shrink-0 items-center cursor-pointer'>
                   <div className='flex flex-row items-center'>
                     <div>
                       <img
-                        className='block h-10 w-auto lg:hidden'
+                        className='block w-auto h-10 lg:hidden'
                         src='/Logo.png'
                         alt='Workflow'
                       />
@@ -47,7 +48,7 @@ export default function Example() {
                   <div className='flex flex-row items-center'>
                     <div>
                       <img
-                        className='h-10 hidden w-auto lg:block'
+                        className='hidden w-auto h-10 lg:block'
                         src='/Logo.png'
                         alt='Workflow'
                       />
@@ -65,7 +66,7 @@ export default function Example() {
                           item.current
                             ? 'bg-gray-900 text-white'
                             : 'text-gray-300  hover:text-pink',
-                          'font-medium px-3 py-2 rounded-md text-sm'
+                          'px-3 py-2 text-sm font-medium rounded-md'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -75,15 +76,15 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              <div className='absolute flex inset-y-0 items-center pr-2 right-0 sm:inset-auto sm:ml-6 sm:pr-0 sm:static'>
+              <div className='flex absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:pr-0 sm:ml-6'>
                 <a
                   href='#_'
-                  className='font-medium font-medium group inline-block px-5 py-2.5 relative rounded text-white'
+                  className='group inline-block relative px-5 py-2.5 font-medium text-white rounded'
                 >
-                  <span className='absolute bg-gradient-to-br blur-sm filter from-[#EF1186] h-full left-0 opacity-50 rounded to-blue-500 top-0 w-full'></span>
-                  <span className='absolute bg-gradient-to-br filter from-[#EF1186] group-active:opacity-0 h-full inset-0 ml-0.5 mt-0.5 opacity-50 rounded to-[#F712A3] w-full'></span>
-                  <span className='absolute bg-gradient-to-br duration-200 ease-out filter from-[#EF1186] group-active:opacity-0 h-full inset-0 rounded shadow-xl to-[#F712A3] transition-all w-full group-hover:blur-sm'></span>
-                  <span className='absolute bg-gradient-to-br duration-200 ease-out from-[#F712A3] h-full inset-0 rounded to-[#EF1186] transition w-full'></span>
+                  <span className='from-[#EF1186] absolute top-0 left-0 w-full h-full bg-gradient-to-br to-blue-500 rounded opacity-50 filter blur-sm'></span>
+                  <span className='from-[#EF1186] group-active:opacity-0 to-[#F712A3] absolute inset-0 mt-0.5 ml-0.5 w-full h-full bg-gradient-to-br rounded opacity-50 filter'></span>
+                  <span className='from-[#EF1186] group-active:opacity-0 to-[#F712A3] absolute inset-0 w-full h-full bg-gradient-to-br rounded shadow-xl filter transition-all duration-200 ease-out group-hover:blur-sm'></span>
+                  <span className='from-[#F712A3] to-[#EF1186] absolute inset-0 w-full h-full bg-gradient-to-br rounded transition duration-200 ease-out'></span>
                   <span className='relative'>Connect wallet</span>
                 </a>
                 {/* Profile dropdown */}
@@ -92,7 +93,7 @@ export default function Example() {
           </div>
 
           <Disclosure.Panel className='sm:hidden'>
-            <div className='pb-3 pt-2 px-2 space-y-1'>
+            <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -102,7 +103,7 @@ export default function Example() {
                     item.current
                       ? 'bg-gray-900 text-white'
                       : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block font-medium px-3 py-2 rounded-md text-base'
+                    'block px-3 py-2 text-base font-medium rounded-md'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

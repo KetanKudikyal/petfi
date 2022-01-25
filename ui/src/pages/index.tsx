@@ -13,7 +13,7 @@ export default function HomePage() {
         <section>
           <Header />
           <div className='flex flex-col items-center justify-center layout min-h-screen text-center'>
-            <h1>Next.js + Tailwind CSS + TypeScript Starter</h1>
+            <h1>Welcome to Petfi</h1>
           </div>
         </section>
       </main>
