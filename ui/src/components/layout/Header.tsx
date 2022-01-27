@@ -2,7 +2,9 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import Moralis from 'moralis/types';
 import { Fragment } from 'react';
+import { useMoralis } from 'react-moralis';
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: false },
@@ -16,6 +18,25 @@ function classNames(...classes: string[]) {
 }
 
 export default function Example() {
+  const { authenticate, isAuthenticated, user, logout } = useMoralis();
+  // const {
+  //   getBalance,
+  //   data: balance,
+  //   nativeToken,
+  //   error,
+  //   isLoading,
+  // } = useNativeBalance({ chain: 'avalanche testnet' });
+
+  const getShortAddress = (user: Moralis.User<Moralis.Attributes> | null) => {
+    if (isAuthenticated) {
+      return (
+        user?.get('ethAddress').slice(0, 5) +
+        '...' +
+        user?.get('ethAddress').slice(-5)
+      );
+    }
+  };
+
   return (
     <Disclosure as='nav' className='bg-dark'>
       {({ open }) => (
@@ -43,7 +64,7 @@ export default function Example() {
                         alt='Workflow'
                       />
                     </div>
-                    <h2 className='ml-2 lg:hidden'>Petfi</h2>
+                    <h2 className='ml-2 text-4xl lg:hidden'>Petfi</h2>
                   </div>
                   <div className='flex flex-row items-center'>
                     <div>
@@ -66,7 +87,7 @@ export default function Example() {
                           item.current
                             ? 'bg-gray-900 text-white'
                             : 'text-gray-300  hover:text-pink',
-                          'px-3 py-2 text-sm font-medium rounded-md'
+                          'px-3 py-2 text-lg font-bold rounded-md '
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -77,17 +98,19 @@ export default function Example() {
                 </div>
               </div>
               <div className='flex absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:pr-0 sm:ml-6'>
-                <a
-                  href='#_'
+                <button
+                  type='button'
+                  onClick={() => (isAuthenticated ? authenticate() : logout())}
                   className='group inline-block relative px-5 py-2.5 font-medium text-white rounded'
                 >
                   <span className='from-[#EF1186] absolute top-0 left-0 w-full h-full bg-gradient-to-br to-blue-500 rounded opacity-50 filter blur-sm'></span>
                   <span className='from-[#EF1186] group-active:opacity-0 to-[#F712A3] absolute inset-0 mt-0.5 ml-0.5 w-full h-full bg-gradient-to-br rounded opacity-50 filter'></span>
                   <span className='from-[#EF1186] group-active:opacity-0 to-[#F712A3] absolute inset-0 w-full h-full bg-gradient-to-br rounded shadow-xl filter transition-all duration-200 ease-out group-hover:blur-sm'></span>
                   <span className='from-[#F712A3] to-[#EF1186] absolute inset-0 w-full h-full bg-gradient-to-br rounded transition duration-200 ease-out'></span>
-                  <span className='relative'>Connect wallet</span>
-                </a>
-                {/* Profile dropdown */}
+                  <span className='relative'>
+                    {isAuthenticated ? getShortAddress(user) : 'Connect Wallet'}
+                  </span>
+                </button>
               </div>
             </div>
           </div>

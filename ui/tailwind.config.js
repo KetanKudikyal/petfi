@@ -16,7 +16,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...fontFamily.sans],
+        primary: 'Playfair Display',
+        secondary: 'Roboto',
       },
       colors: {
         primary: {

@@ -36,7 +36,7 @@ export default function ComponentsPage() {
         >
           <div
             className={clsx(
-              'layout min-h-screen py-20',
+              'layout py-20 min-h-screen',
               mode === 'dark' ? 'text-white' : 'text-black'
             )}
           >
@@ -72,7 +72,7 @@ export default function ComponentsPage() {
                       mode === 'dark'
                         ? 'bg-dark border border-gray-600'
                         : 'bg-white border-gray-300',
-                      'focus:border-primary-400 focus:outline-none focus:ring focus:ring-primary-400'
+                      'focus:border-primary-400 focus:ring focus:ring-primary-400 focus:outline-none'
                     )}
                     onChange={(e) => setColor(e.target.value as Color)}
                   >
@@ -86,35 +86,35 @@ export default function ComponentsPage() {
                     Check list of colors
                   </ButtonLink>
                 </div>
-                <div className='flex flex-wrap font-medium gap-2 text-xs'>
-                  <div className='bg-primary-50 flex h-10 items-center justify-center rounded text-black w-10'>
+                <div className='flex flex-wrap gap-2 text-xs font-medium'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black bg-primary-50 rounded'>
                     50
                   </div>
-                  <div className='bg-primary-100 flex h-10 items-center justify-center rounded text-black w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black bg-primary-100 rounded'>
                     100
                   </div>
-                  <div className='bg-primary-200 flex h-10 items-center justify-center rounded text-black w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black bg-primary-200 rounded'>
                     200
                   </div>
-                  <div className='bg-primary-300 flex h-10 items-center justify-center rounded text-black w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black bg-primary-300 rounded'>
                     300
                   </div>
-                  <div className='bg-primary-400 flex h-10 items-center justify-center rounded text-black w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black bg-primary-400 rounded'>
                     400
                   </div>
-                  <div className='bg-primary-500 flex h-10 items-center justify-center rounded text-black w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-black bg-primary-500 rounded'>
                     500
                   </div>
-                  <div className='bg-primary-600 flex h-10 items-center justify-center rounded text-white w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-white bg-primary-600 rounded'>
                     600
                   </div>
-                  <div className='bg-primary-700 flex h-10 items-center justify-center rounded text-white w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-white bg-primary-700 rounded'>
                     700
                   </div>
-                  <div className='bg-primary-800 flex h-10 items-center justify-center rounded text-white w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-white bg-primary-800 rounded'>
                     800
                   </div>
-                  <div className='bg-primary-900 flex h-10 items-center justify-center rounded text-white w-10'>
+                  <div className='flex justify-center items-center w-10 h-10 text-white bg-primary-900 rounded'>
                     900
                   </div>
                 </div>
